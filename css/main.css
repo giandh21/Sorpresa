@@ -1837,14 +1837,20 @@ body {
   animation-delay: 1s;
 }
 /* descripción */
-
+.imagen{
+  display: none;
+  position: absolute;
+  text-align: center;
+  height: 200px;
+  width: 150px;
+}
 .descripcion{
   width: 850px;
   z-index: 200;
   font-size: 2rem;
   font-family: 'Poppins',cursive;
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   font-weight: bold;
   opacity: 1;
   animation: fadeIn 4s ease-in-out forwards;
@@ -1864,14 +1870,27 @@ body {
 @media screen and (max-width:820px){
   .greetings{
       display: block;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 800;
       text-align: center;
   }
   .descripcion{
-    width: 400px;  
-    font-size:1.5rem;
+    width: 300px;  
+    font-size:1rem;
     text-align: center;
     padding: 5px;
+  }
+  .imagen{
+    display: block;
+    top: 20%;
+    animation: fadeIn 4s ease-in-out forwards;
+    opacity: 1;
+    z-index: 100;
+    margin: 0 auto;
+    
+  }
+  .imagen img{
+    border-radius: 20px;
+
   }
 }
