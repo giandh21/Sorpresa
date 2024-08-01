@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.imagen img{
+    border-radius: 23px;
+    height: 150px;
+}
+
+/* Movimiento de boton */
+div.at-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.at-item a{
+    text-decoration: none;
+    background-color: #0a2be9;
+    padding: 20px;
+    color: #e5d9d9 !important;
+
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+}
+
+.at-item a:hover{
+    background-color: rgb(33, 41, 155);
+    padding: 22px;
+}
+.at-item {
+    background-color:transparent; 
+    animation-name: wobble-hor-top;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    padding: 22px;
+    border-radius: 80px;
+
+    border: none;
+
+}
+@keyframes wobble-hor-top {
+        
+    0% {
+        transform:translateX(0%);
+        transform-origin:50% 50%;
+    }
+    15% {
+        transform:translateX(-30px) rotate(6deg);
+    }
+    30% {
+        transform:translateX(15px) rotate(-6deg);
+    }
+    45% {
+        transform:translateX(-15px) rotate(3.6deg);
+    }
+    60% {
+        transform:translateX(9px) rotate(-2.4deg);
+    }
+    75% {
+        transform:translateX(-6px) rotate(1.2deg);
+    }
+    100% {
+        transform:translateX(0%);
+        transform-origin:50% 50%;
+    }
+}
+/* fin de movimiento */
+.greetings{
+    margin-top: 50px;
+    font-size: 7rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #f32424;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
